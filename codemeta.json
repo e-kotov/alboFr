@@ -1,0 +1,119 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "alboFr",
+  "description": "Get French Data on Tiger Mosquito (Aedes Albopictus) colonisation in France from the online map at <https://signalement-moustique.anses.fr/signalement_albopictus/colonisees>.",
+  "name": "alboFr: Get French Data on Tiger Mosquito Colonisation",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.0.0.9000",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.4.2 (2024-10-31)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Egor",
+      "familyName": "Kotov",
+      "email": "kotov.egor@gmail.com",
+      "@id": "https://orcid.org/0000-0001-6690-5345"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Egor",
+      "familyName": "Kotov",
+      "email": "kotov.egor@gmail.com",
+      "@id": "https://orcid.org/0000-0001-6690-5345"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ggplot2",
+      "name": "ggplot2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "quarto",
+      "name": "quarto",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=quarto"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "purrr",
+      "name": "purrr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=purrr"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "RcppSimdJson",
+      "name": "RcppSimdJson",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=RcppSimdJson"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "sf",
+      "name": "sf",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sf"
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "152.794KB",
+  "citation": [
+    {
+      "@type": "SoftwareSourceCode",
+      "datePublished": "2025",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "Egor",
+          "familyName": "Kotov",
+          "email": "kotov.egor@gmail.com",
+          "@id": "https://orcid.org/0000-0001-6690-5345"
+        }
+      ],
+      "name": "alboFr: Get French Data on Tiger Mosquito Colonisation",
+      "url": "https://github.com/e-kotov/alboFr"
+    }
+  ],
+  "codeRepository": "https://github.com/e-kotov/alboFr",
+  "readme": "https://github.com/e-kotov/alboFr/blob/main/README.md",
+  "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental"
+}

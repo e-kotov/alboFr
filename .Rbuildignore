@@ -1,0 +1,12 @@
+^alboFr\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^README\.qmd$
+^cran-comments\.md$
+^private$
+^CITATION\.cff$
+^codemeta\.json$
+^.github$
+^.*\.Rproj$
+^_pkgdown.yml$
+.*\.gpkg

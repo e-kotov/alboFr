@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "type": "SoftwareSourceCode",
+      "author": {
+        "id": "https://orcid.org/0000-0001-6690-5345",
+        "type": "Person",
+        "email": "kotov.egor@gmail.com",
+        "familyName": "Kotov",
+        "givenName": "Egor"
+      },
+      "codeRepository": "https://github.com/e-kotov/alboFr",
+      "description": "Get French Data on Tiger Mosquito (Aedes Albopictus) colonisation in France from the online map at <https://signalement-moustique.anses.fr/signalement_albopictus/colonisees>.",
+      "license": "https://spdx.org/licenses/MIT",
+      "name": "alboFr: Get French Data on Tiger Mosquito Colonisation",
+      "programmingLanguage": {
+        "type": "ComputerLanguage",
+        "name": "R",
+        "url": "https://r-project.org"
+      },
+      "runtimePlatform": "R version 4.4.2 (2024-10-31)",
+      "version": "0.0.0.9000"
+    },
+    {
+      "type": "SoftwareSourceCode",
+      "author": {
+        "id": "https://orcid.org/0000-0001-6690-5345",
+        "type": "Person",
+        "email": "kotov.egor@gmail.com",
+        "familyName": "Kotov",
+        "givenName": "Egor"
+      },
+      "name": "alboFr: Get French Data on Tiger Mosquito Colonisation"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+url: https://e-kotov.github.io/alboFr/
+template:
+  bootstrap: 5
+
+authors:
+  Egor Kotov:
+    href: "https://www.ekotov.pro"
+
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, tutorials, news]
+    right: [search, github, lightswitch]
