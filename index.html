@@ -49,12 +49,19 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>The goal of <code>alboFr</code> is to retrieve the latest online data from <a href="https://signalement-moustique.anses.fr/signalement_albopictus/colonisees" class="external-link uri">https://signalement-moustique.anses.fr/signalement_albopictus/colonisees</a> and convert them into an <code>sf</code> object.</p>
+<p>The goal of <code>alboFr</code> is to retrieve the latest online data from <a href="https://signalement-moustique.anses.fr/signalement_albopictus/colonisees" target="_blank" class="external-link">https://signalement-moustique.anses.fr/signalement_albopictus/colonisees</a> and convert them into an <code>sf</code> object.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of alboFr from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of <code>alboFr</code> from R-universe with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"alboFr"</span>,</span>
+<span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://e-kotov.r-universe.dev"</span>,</span>
+<span>    <span class="st">"https://cloud.r-project.org"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>You can also install the development version of <code>alboFr</code> from <a href="https://github.com/e-kotov/alboFr" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"e-kotov/alboFr"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -62,26 +69,26 @@
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>The package only has one function to get the data:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">alboFr</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_tiger_mosquito_colonisation_in_france.html">get_tiger_mosquito_colonisation_in_france</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>Simple feature collection with <span class="dv">6</span> features and <span class="dv">1</span> field</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>Geometry type<span class="sc">:</span> POLYGON</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>Dimension<span class="sc">:</span>     XY</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>Bounding box<span class="sc">:</span>  xmin<span class="sc">:</span> <span class="fl">1.195249</span> ymin<span class="sc">:</span> <span class="fl">42.99451</span> xmax<span class="sc">:</span> <span class="fl">7.835923</span> ymax<span class="sc">:</span> <span class="fl">48.64427</span></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>Geodetic CRS<span class="sc">:</span>  WGS <span class="dv">84</span></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  toujours_signaler                       geometry</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="dv">1</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">7.77076</span> <span class="fl">48.49202</span>,...</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="dv">2</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">1.987127</span> <span class="dv">42</span>.<span class="dv">99451</span>...</span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="dv">3</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">1.584032</span> <span class="dv">44</span>.<span class="dv">76673</span>...</span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="dv">4</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">1.249545</span> <span class="dv">44</span>.<span class="dv">34751</span>...</span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="dv">5</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">2.566791</span> <span class="dv">43</span>.<span class="dv">02245</span>...</span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="dv">6</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">3.502814</span> <span class="dv">43</span>.<span class="dv">97531</span>...</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>Simple feature collection with <span class="dv">6</span> features and <span class="dv">1</span> field</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>Geometry type<span class="sc">:</span> POLYGON</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>Dimension<span class="sc">:</span>     XY</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>Bounding box<span class="sc">:</span>  xmin<span class="sc">:</span> <span class="fl">1.195249</span> ymin<span class="sc">:</span> <span class="fl">42.99451</span> xmax<span class="sc">:</span> <span class="fl">7.835923</span> ymax<span class="sc">:</span> <span class="fl">48.64427</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>Geodetic CRS<span class="sc">:</span>  WGS <span class="dv">84</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  toujours_signaler                       geometry</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="dv">1</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">7.77076</span> <span class="fl">48.49202</span>,...</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="dv">2</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">1.987127</span> <span class="dv">42</span>.<span class="dv">99451</span>...</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="dv">3</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">1.584032</span> <span class="dv">44</span>.<span class="dv">76673</span>...</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="dv">4</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">1.249545</span> <span class="dv">44</span>.<span class="dv">34751</span>...</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="dv">5</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">2.566791</span> <span class="dv">43</span>.<span class="dv">02245</span>...</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="dv">6</span>              <span class="cn">TRUE</span> <span class="fu">POLYGON</span> ((<span class="fl">3.502814</span> <span class="dv">43</span>.<span class="dv">97531</span>...</span></code></pre></div>
 <p>The data can then be plotted:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">toujours_signaler</span><span class="op">)</span>, col <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
@@ -97,7 +104,7 @@
 <span><span class="co"># )</span></span></code></pre></div>
 <p><img src="reference/figures/map.png" style="width:100.0%"></p>
 <p>Finally the data can be saved to a GeoPackage file:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_write.html" class="external-link">st_write</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"tiger_mosquito_colonisation_in_france.gpkg"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -107,12 +114,12 @@
 <p>To cite package ‘alboFr’ in publications use:</p>
 <p>Kotov E (2025). <em>alboFr: Get French Data on Tiger Mosquito Colonisation</em>. <a href="https://github.com/e-kotov/alboFr" class="external-link uri">https://github.com/e-kotov/alboFr</a>.</p>
 <p>BibTeX:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="sc">@</span>Manual{albofr,</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  title <span class="ot">=</span> {alboFr<span class="sc">:</span> Get French Data on Tiger Mosquito Colonisation},</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  author <span class="ot">=</span> {Egor Kotov},</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  year <span class="ot">=</span> {<span class="dv">2025</span>},</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>e<span class="sc">-</span>kotov<span class="sc">/</span>alboFr},</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="sc">@</span>Manual{albofr,</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  title <span class="ot">=</span> {alboFr<span class="sc">:</span> Get French Data on Tiger Mosquito Colonisation},</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  author <span class="ot">=</span> {Egor Kotov},</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>  year <span class="ot">=</span> {<span class="dv">2025</span>},</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>  url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>e<span class="sc">-</span>kotov<span class="sc">/</span>alboFr},</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
