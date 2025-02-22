@@ -61,14 +61,14 @@ p <- ggplot(x) +
   geom_sf(aes(fill = toujours_signaler), col = NA) +
   facet_wrap(~toujours_signaler)
 p
-ggsave(
-  filename = "man/figures/map.png",
-  plot = p,
-  width = 5,
-  height = 4,
-  units = "in",
-  dpi = 300
-)
+# ggsave(
+#   filename = "man/figures/map.png",
+#   plot = p,
+#   width = 5,
+#   height = 4,
+#   units = "in",
+#   dpi = 300
+# )
 ```
 
 <img src="man/figures/map.png" style="width:100.0%" />
