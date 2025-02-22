@@ -12,14 +12,26 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://www.r-pkg.org/badges/version/alboFr)](https://CRAN.R-project.org/package=alboFr)
 <!-- badges: end -->
 
-The goal of `alboFr` is to retrieve the latest online data from
-<https://signalement-moustique.anses.fr/signalement_albopictus/colonisees>
+The goal of `alboFr` is to retrieve the latest online data from <a
+href="https://signalement-moustique.anses.fr/signalement_albopictus/colonisees"
+target="_blank">https://signalement-moustique.anses.fr/signalement_albopictus/colonisees</a>
 and convert them into an `sf` object.
 
 ## Installation
 
-You can install the development version of alboFr from
-[GitHub](https://github.com/) with:
+You can install the development version of `alboFr` from R-universe
+with:
+
+``` r
+install.packages("alboFr",
+  repos = c("https://e-kotov.r-universe.dev",
+    "https://cloud.r-project.org"
+  )
+)
+```
+
+You can also install the development version of `alboFr` from
+[GitHub](https://github.com/e-kotov/alboFr) with:
 
 ``` r
 # install.packages("pak")
