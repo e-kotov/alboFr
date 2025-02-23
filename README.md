@@ -38,18 +38,18 @@ You can also install the development version of `alboFr` from
 pak::pak("e-kotov/alboFr")
 ```
 
-## Example
+## Example with `sf` data type
 
 The package only has one function to get the data:
 
 ``` r
 library(alboFr)
 
-x <- get_tiger_mosquito_colonisation_in_france()
+x_sf <- get_tiger_mosquito_colonisation_in_france(output = "sf")
 ```
 
 ``` r
-head(x)
+head(x_sf)
 ```
 
     Simple feature collection with 6 features and 1 field
@@ -69,7 +69,7 @@ The data can then be plotted:
 
 ``` r
 library(ggplot2)
-p <- ggplot(x) +
+p <- ggplot(x_sf) +
   geom_sf(aes(fill = toujours_signaler), col = NA) +
   facet_wrap(~toujours_signaler)
 p
@@ -89,8 +89,25 @@ Finally the data can be saved to a GeoPackage file:
 
 ``` r
 library(sf)
-st_write(x, "tiger_mosquito_colonisation_in_france.gpkg")
+st_write(x_sf, "tiger_mosquito_colonisation_in_france.gpkg")
 ```
+
+## Example without `sf` data type
+
+You do not have to have `sf` package installed to use {`alboFr`}. You
+can just retrieve the data in `geojson` format and save it directly to
+disk bypassing the `sf` object creation:
+
+``` r
+x_geojson <- get_tiger_mosquito_colonisation_in_france(output = "geojson")
+writeLines(x_geojson, "tiger_mosquito_colonisation_in_france.geojson")
+```
+
+## Data license
+
+The original data does not have a well defined license, but the legal
+matters regarding this data can be found here:
+<https://signalement-moustique.anses.fr/signalement_albopictus/mentionslegales>.
 
 ## Citation
 
