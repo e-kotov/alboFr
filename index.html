@@ -66,15 +66,15 @@
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"e-kotov/alboFr"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="example-with-sf-data-type">Example with <code>sf</code> data type<a class="anchor" aria-label="anchor" href="#example-with-sf-data-type"></a>
 </h2>
 <p>The package only has one function to get the data:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">alboFr</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_tiger_mosquito_colonisation_in_france.html">get_tiger_mosquito_colonisation_in_france</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">x_sf</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_tiger_mosquito_colonisation_in_france.html">get_tiger_mosquito_colonisation_in_france</a></span><span class="op">(</span>output <span class="op">=</span> <span class="st">"sf"</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">x_sf</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>Simple feature collection with <span class="dv">6</span> features and <span class="dv">1</span> field</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>Geometry type<span class="sc">:</span> POLYGON</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>Dimension<span class="sc">:</span>     XY</span>
@@ -90,7 +90,7 @@
 <p>The data can then be plotted:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">x_sf</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">toujours_signaler</span><span class="op">)</span>, col <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">toujours_signaler</span><span class="op">)</span></span>
 <span><span class="va">p</span></span>
@@ -106,7 +106,20 @@
 <p>Finally the data can be saved to a GeoPackage file:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_write.html" class="external-link">st_write</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"tiger_mosquito_colonisation_in_france.gpkg"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_write.html" class="external-link">st_write</a></span><span class="op">(</span><span class="va">x_sf</span>, <span class="st">"tiger_mosquito_colonisation_in_france.gpkg"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="example-without-sf-data-type">Example without <code>sf</code> data type<a class="anchor" aria-label="anchor" href="#example-without-sf-data-type"></a>
+</h2>
+<p>You do not have to have <code>sf</code> package installed to use {<code>alboFr</code>}. You can just retrieve the data in <code>geojson</code> format and save it directly to disk bypassing the <code>sf</code> object creation:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x_geojson</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_tiger_mosquito_colonisation_in_france.html">get_tiger_mosquito_colonisation_in_france</a></span><span class="op">(</span>output <span class="op">=</span> <span class="st">"geojson"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/writeLines.html" class="external-link">writeLines</a></span><span class="op">(</span><span class="va">x_geojson</span>, <span class="st">"tiger_mosquito_colonisation_in_france.geojson"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="data-license">Data license<a class="anchor" aria-label="anchor" href="#data-license"></a>
+</h2>
+<p>The original data does not have a well defined license, but the legal matters regarding this data can be found here: <a href="https://signalement-moustique.anses.fr/signalement_albopictus/mentionslegales" class="external-link uri">https://signalement-moustique.anses.fr/signalement_albopictus/mentionslegales</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
@@ -114,12 +127,12 @@
 <p>To cite package ‘alboFr’ in publications use:</p>
 <p>Kotov E (2025). <em>alboFr: Get French Data on Tiger Mosquito Colonisation</em>. <a href="https://github.com/e-kotov/alboFr" class="external-link uri">https://github.com/e-kotov/alboFr</a>.</p>
 <p>BibTeX:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="sc">@</span>Manual{albofr,</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  title <span class="ot">=</span> {alboFr<span class="sc">:</span> Get French Data on Tiger Mosquito Colonisation},</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  author <span class="ot">=</span> {Egor Kotov},</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>  year <span class="ot">=</span> {<span class="dv">2025</span>},</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>  url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>e<span class="sc">-</span>kotov<span class="sc">/</span>alboFr},</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="sc">@</span>Manual{albofr,</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  title <span class="ot">=</span> {alboFr<span class="sc">:</span> Get French Data on Tiger Mosquito Colonisation},</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>  author <span class="ot">=</span> {Egor Kotov},</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>  year <span class="ot">=</span> {<span class="dv">2025</span>},</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>  url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>e<span class="sc">-</span>kotov<span class="sc">/</span>alboFr},</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
