@@ -54,22 +54,22 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=quarto"
-    }
-  ],
-  "softwareRequirements": {
-    "1": {
+    },
+    {
       "@type": "SoftwareApplication",
-      "identifier": "purrr",
-      "name": "purrr",
+      "identifier": "sf",
+      "name": "sf",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=purrr"
-    },
-    "2": {
+      "sameAs": "https://CRAN.R-project.org/package=sf"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "RcppSimdJson",
       "name": "RcppSimdJson",
@@ -81,21 +81,21 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=RcppSimdJson"
     },
-    "3": {
+    "2": {
       "@type": "SoftwareApplication",
-      "identifier": "sf",
-      "name": "sf",
+      "identifier": "rlang",
+      "name": "rlang",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=sf"
+      "sameAs": "https://CRAN.R-project.org/package=rlang"
     },
     "SystemRequirements": null
   },
-  "fileSize": "152.794KB",
+  "fileSize": "72.513KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -115,5 +115,6 @@
   ],
   "codeRepository": "https://github.com/e-kotov/alboFr",
   "readme": "https://github.com/e-kotov/alboFr/blob/main/README.md",
-  "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental"
+  "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental",
+  "keywords": ["data", "france", "aedes-albopictus", "tiger-mosquito"]
 }

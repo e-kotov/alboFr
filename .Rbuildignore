@@ -10,3 +10,6 @@
 ^.*\.Rproj$
 ^_pkgdown.yml$
 .*\.gpkg
+^docs$
+^tools$
+^private$

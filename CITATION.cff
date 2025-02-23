@@ -33,21 +33,6 @@ contact:
   orcid: https://orcid.org/0000-0001-6690-5345
 references:
 - type: software
-  title: purrr
-  abstract: 'purrr: Functional Programming Tools'
-  notes: Imports
-  url: https://purrr.tidyverse.org/
-  repository: https://CRAN.R-project.org/package=purrr
-  authors:
-  - family-names: Wickham
-    given-names: Hadley
-    email: hadley@posit.co
-    orcid: https://orcid.org/0000-0003-4757-117X
-  - family-names: Henry
-    given-names: Lionel
-    email: lionel@posit.co
-  year: '2025'
-- type: software
   title: RcppSimdJson
   abstract: 'RcppSimdJson: ''Rcpp'' Bindings for the ''simdjson'' Header-Only Library
     for ''JSON'' Parsing'
@@ -63,16 +48,18 @@ references:
     given-names: Daniel
   year: '2025'
 - type: software
-  title: sf
-  abstract: 'sf: Simple Features for R'
+  title: rlang
+  abstract: 'rlang: Functions for Base Types and Core R and ''Tidyverse'' Features'
   notes: Imports
-  url: https://r-spatial.github.io/sf/
-  repository: https://CRAN.R-project.org/package=sf
+  url: https://rlang.r-lib.org
+  repository: https://CRAN.R-project.org/package=rlang
   authors:
-  - family-names: Pebesma
-    given-names: Edzer
-    email: edzer.pebesma@uni-muenster.de
-    orcid: https://orcid.org/0000-0001-8049-7069
+  - family-names: Henry
+    given-names: Lionel
+    email: lionel@posit.co
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
   year: '2025'
 - type: software
   title: ggplot2
@@ -128,5 +115,17 @@ references:
     given-names: Christophe
     email: cderv@posit.co
     orcid: https://orcid.org/0000-0003-4474-2498
+  year: '2025'
+- type: software
+  title: sf
+  abstract: 'sf: Simple Features for R'
+  notes: Suggests
+  url: https://r-spatial.github.io/sf/
+  repository: https://CRAN.R-project.org/package=sf
+  authors:
+  - family-names: Pebesma
+    given-names: Edzer
+    email: edzer.pebesma@uni-muenster.de
+    orcid: https://orcid.org/0000-0001-8049-7069
   year: '2025'
 
