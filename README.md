@@ -10,6 +10,8 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/alboFr)](https://CRAN.R-project.org/package=alboFr)
+[![R-CMD-check](https://github.com/e-kotov/alboFr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/e-kotov/alboFr/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 The goal of `alboFr` is to retrieve the latest online data from <a
