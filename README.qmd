@@ -15,7 +15,7 @@ default-image-extension: ""
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/alboFr)](https://CRAN.R-project.org/package=alboFr)
 [![R-CMD-check](https://github.com/e-kotov/alboFr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/e-kotov/alboFr/actions/workflows/R-CMD-check.yaml)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14914417.svg)](https://doi.org/https://doi.org/10.5281/zenodo.14914417)
 <!-- badges: end -->
 
 The goal of `alboFr` is to retrieve the latest online data from [https://signalement-moustique.anses.fr/signalement_albopictus/colonisees](https://signalement-moustique.anses.fr/signalement_albopictus/colonisees){target="_blank"} and convert them into an `sf` object.
@@ -112,6 +112,9 @@ writeLines(x_geojson, "tiger_mosquito_colonisation_in_france.geojson")
 
 The original data does not have a well defined license, but the legal matters regarding this data can be found here: [https://signalement-moustique.anses.fr/signalement_albopictus/mentionslegales](https://signalement-moustique.anses.fr/signalement_albopictus/mentionslegales).
 
+## Data archive
+
+The data provider does not supply data versioning, but you can find the daily automatic snapshots of the data in this GitHub repository [https://github.com/e-kotov/alboFr-data-archive](https://github.com/e-kotov/alboFr-data-archive) or at Zenodo [https://doi.org/10.5281/zenodo.14914293](https://doi.org/10.5281/zenodo.14914293).
 
 ## Citation
 
